@@ -55,9 +55,8 @@ def get_citations_needed_report(URL):
     output = ''
     for p in range(len(all_paragraphs)):
         output += f'citation {p+1}: \n'
-        output += f'{all_paragraphs[p]} \n'
-        output += f'So , we need citation after the below line: \n'
-        output += f'{all_lines[p]} \n\n\n'
+        output += f'paragraph: {all_paragraphs[p]} \n'
+        # output += f'{all_lines[p]} \n\n\n'
 
     f = open("citation.txt", "w")
     f.write(output)
